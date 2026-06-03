@@ -1,87 +1,55 @@
-# Reproducible reports with Quarto
+# How to write a good README
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18848356.svg)](https://doi.org/10.5281/zenodo.18848356)
 [![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
 
-Training materials for a two-hour online workshop introducing [Quarto](https://quarto.org/), a scientific and technical publishing system for reproducible research. Developed as part of the [UKRI Digital Research Skills Catalyst](https://digitalskillscatalyst.ac.uk/) (funded by UKRI/ST/B000299/1).
+Training materials for a hands-on workshop introducing best practices for writing clear, informative README files to support reproducible, reusable, and well-documented research projects. Developed as part of the UKRI Digital Research Skills Catalyst (funded by UKRI/ST/B000299/1).
 
-🌐 **Workshop website:** https://ukri-digital-research-skills-catalyst.github.io/quarto-intro/
+🌐 **Workshop materials:** https://ukri-digital-research-skills-catalyst.github.io/BESREADMEworkshop/
 
 ---
 
 ## Overview
 
-This workshop teaches participants how to integrate code, results, and narrative text in a single Quarto document to produce professional, reproducible reports. It is taught using R and RStudio, using [Gapminder](https://www.gapminder.org/) data on global development as the worked example.
+This workshop teaches participants how to design and write effective README files that clearly describe the purpose, structure, and use of a research project. Using practical examples and a guided exercise, participants will learn how to communicate essential information about data, code, and workflows in a way that supports reproducibility and collaboration.
 
-By the end of the workshop, participants can transform raw data into a polished HTML, Word, or PDF report where the text and analysis remain in sync automatically.
+By the end of the workshop, participants will be able to take a simple project and produce a well-structured README that makes it easier for others (and their future selves) to understand and reuse their work.
+
+---
 
 ## Audience
 
-Researchers, research support staff, and others in academia or industry who regularly produce reports involving data analysis. Some familiarity with RStudio and beginner-level R is assumed.
+Researchers, research support staff, and students in academia or industry who create or work with data, code, or analysis projects. No prior experience with GitHub or advanced technical tools is required. The workshop is suitable for beginners as well as those looking to improve existing documentation practices.
+
+---
 
 ## Learning objectives
 
 Participants will learn how to:
 
-- Construct a structured Quarto (`.qmd`) document using YAML headers to define metadata
-- Format narrative text using Markdown syntax
-- Integrate R code chunks to produce tables and visualisations within the document
-- Use inline code to insert dynamic statistics that update automatically if the data changes
-- Control output with chunk options (e.g. hiding code while showing results)
-- Render a single source document into multiple formats (HTML, Word, PDF)
+- Construct a clear and well-structured README file that effectively describes a project’s purpose, contents, and usage
+- Use Markdown syntax to format README documents, including headings, lists, links, and emphasis
+- Communicate key information about data, code, and project structure in a consistent and accessible way
+- Include essential documentation elements such as setup instructions, file structure, and usage guidance
+- Apply good practice principles for clarity, completeness, and reproducibility in project documentation
+- Adapt README content for different contexts such as GitHub repositories and shared research folders
 
-## Repository structure
+---
 
-```
-quarto-intro/
-├── index.qmd          # Welcome page and workshop overview
-├── before.qmd         # Pre-course setup instructions
-├── materials.qmd      # Workshop materials and exercises
-├── _quarto.yml        # Quarto project configuration
-├── styles.css         # Custom CSS styling
-├── references.bib     # Bibliography
-├── data-raw/          # Gapminder dataset
-├── images/            # Logo and other images
-├── .github/workflows/ # GitHub Actions for building and deploying the site
-└── CITATION.cff       # Citation metadata
-```
+## Workshop format
 
-## Building the site locally
+This is a short, interactive workshop combining brief demonstrations with hands-on group work. Participants will review examples of good and poor README files, apply a simple checklist to a dummy project, and draft their own README in small groups, followed by discussion and comparison with a model solution.
 
-You will need [Quarto](https://quarto.org/docs/get-started/) and R with the following packages installed:
-
-```r
-install.packages(c("tidyverse", "knitr", "kableExtra", "xml2", "downlit"))
-```
-
-Then render the site with:
-
-```bash
-quarto render
-```
-
-or preview it with:
-
-```bash
-quarto preview
-```
-
-The site is automatically built and deployed to GitHub Pages on every push to `main` via the GitHub Actions workflow in `.github/workflows/`.
-
-## Instructor
-
-**Emma Rand**, Professor, Department of Biology, University of York
-([ORCID: 0000-0002-1358-8275](https://orcid.org/0000-0002-1358-8275))
-
-Emma specialises in teaching data science and reproducibility, particularly to those who do not see themselves as programmers. She leads [Cloud-SPAN](https://cloud-span.york.ac.uk/) and the [UKRI Digital Research Skills Catalyst](https://digitalskillscatalyst.ac.uk/).
+---
 
 ## Citation
 
 If you use or reuse these materials, please cite them:
 
-> Rand, E. (2026). *Reproducible reports with Quarto. A UKRI Digital Research Skills Catalyst workshop* (v0.1.0-alpha). Zenodo. https://doi.org/10.5281/zenodo.18848356
+> Miranda, P. & Cooper, N. (2026). *Writing effective README files. A UKRI Digital Research Skills Catalyst workshop* (v1.0). Zenodo. https://doi.org/10.5281/zenodo.xxxxxxx
 
 Or use the `CITATION.cff` file in this repository.
+
+---
 
 ## License
 
