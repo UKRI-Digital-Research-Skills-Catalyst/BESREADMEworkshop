@@ -6,7 +6,7 @@ date: last-modified
 date-format: D MMMM, YYYY
 
 website:
-  title: "Reproducible reports<br>with Quarto"
+  title: "How to write a good README"
   favicon: images/logo_no_text_transparent.png
   page-footer:
     left: "<https://digitalskillscatalyst.ac.uk/>"
@@ -20,8 +20,6 @@ website:
     left:
       - text: "Welcome!"
         file: index.qmd
-      - text: "Before the course"
-        file:  before.qmd
       - text: "Materials"
         file:  materials.qmd
 
@@ -40,7 +38,7 @@ format:
     css: styles.css
     callout-important-title: "Challenge"
     link-external-newwindow: true
-    link-external-filter: '^(?:http:|https:)\/\/ukri-digital-research-skills-catalyst\.github\.io\/quarto-intro'
+    link-external-filter: '^(?:http:|https:)\/\/ukri-digital-research-skills-catalyst\.github\.io\/BESREADMEworkshop'
     code-copy: true
     code-link: true
     code-overflow: wrap
