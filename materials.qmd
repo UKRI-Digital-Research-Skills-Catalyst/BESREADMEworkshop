@@ -4,12 +4,6 @@ toc: true
 toc-location: right
 ---
 
-```{r}
-#| label: setup
-#| echo: false
-inline <- function(x = "") paste0("`` `r ", x, "` ``")
-```
-
 # Introduction
 
 # What makes a bad README?
