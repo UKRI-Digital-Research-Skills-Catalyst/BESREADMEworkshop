@@ -13,8 +13,8 @@ website:
   navbar:
     logo: images/logo_transparent_background.png
     background: primary
-    site-url: https://ukri-digital-research-skills-catalyst.github.io/quarto-intro/
-    repo-url: https://ukri-digital-research-skills-catalyst.github.io/quarto-intro/
+    site-url: https://ukri-digital-research-skills-catalyst.github.io/How to write a good README/
+    repo-url: https://ukri-digital-research-skills-catalyst.github.io/How to write a good README/
     page-navigation: true
     search: true
     left:
