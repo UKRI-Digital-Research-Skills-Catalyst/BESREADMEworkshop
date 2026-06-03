@@ -4,65 +4,23 @@ toc: true
 toc-location: right
 ---
 
-# Reproducible reports with Quarto
+# How to write a README
 
 ## Overview
 
-This on-line workshop introduces you to Quarto, a scientific and
-technical publishing system designed to facilitate reproducible working
-practices by allowing you to integrate code, results, and narrative text
-in a single document. Quarto supports multiple programming languages,
-including R, Python, Julia, and Observable JavaScript.
-
-The workshop will be taught using R and RStudio, but the concepts are
-applicable to other programming languages supported by Quarto. Some
-familiarity with the layout of RStudio and beginner level knowledge of R
-is assumed.
-
-By the end of this workshop, participants will be able to transform raw
-data into a professional, polished report (HTML, Word, or PDF) where the
-text and analysis remain in sync. We will use the
-[Gapminder](https://www.gapminder.org/) data on global development to
-demonstrate how to produce a reproducible country profile report that
-analyses the relationship between wealth (GDP per capita) and health
-(Life Expectancy) over the last 50 years.
-
-## Audience
-
-This workshop is intended for researchers and research support staff in
-academia or industry or others that regularly produce reports with data
-analysis.
-
-## How to sign-up
-
-The on-line workshop is on **22 July 2026 1000 - 1200 GMT**
-
-[**Register for the
-workshop**](https://digitalskillscatalyst.ac.uk/news/2026-01-13-quarto2.html)
+Placeholder intro paragraph.
 
 ## Learning objectives
 
 Participants will learn how to:
 
--   Construct a structured Quarto (.qmd) document using YAML headers to
-    define metadata (title, author, table of contents).
--   Format narrative text using Markdown syntax to create headers,
-    lists, and emphasis without relying on word processor GUIs.
--   Integrate R code chunks into prose to produce tables and
-    visualizations directly within the document.
--   Implement "Inline Code" to insert dynamic statistics (e.g., specific
-    means or *p*-values) directly into sentences, ensuring numbers
-    update automatically if the data changes.
--   Control report output using "Chunk Options" to hide raw code from
-    the final reader while keeping the results visible.
--   Render a single source document into multiple output formats (HTML
-    for web, MS Word for collaboration, or PDF for publication).
+- Construct a clear and well-structured README file that effectively describes a project’s purpose, contents, and usage.
+- Use Markdown syntax to format README documents, including headings, lists, links, and emphasis, without relying on word processors.
+- Integrate key information about data, code, and workflows into a coherent narrative that supports reproducibility and reuse.
+- Include essential project metadata (e.g., installation instructions, dependencies, file structure, and usage examples) in a way that is accessible to different audiences.
+- Apply best practice principles for documenting code and data, including clarity, completeness, and consistency.
+- Adapt README content for different contexts (e.g., GitHub repositories, shared data folders, or collaborative research projects).
 
-## Instructor
+## Credits
 
-Emma Rand is a Professor in the Department of Biology at the University
-of York where she specialises in teaching data science and
-reproducibility, particularly to those who do not see themselves as
-programmers. She leads a UKRI funded projects called
-[Cloud-SPAN](https://cloud-span.york.ac.uk/) and the [UKRI Digital
-Research Skills Catalyst](https://digitalskillscatalyst.ac.uk/).
+This workshop was designed as a joint venture between the BES Journal of Methods in Ecology and Evolution and the [UKRI Digital Research Skills Catalyst](https://digitalskillscatalyst.ac.uk/).
