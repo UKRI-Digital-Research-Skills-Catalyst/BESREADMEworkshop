@@ -1,21 +1,376 @@
 ---
-title: "How to write a good README"
+title: "Writing clear README files for research data and code"
 toc: true
 toc-location: right
 ---
 
 # Introduction
 
-# What makes a bad README?
+## What is a README?
 
-# What makes a good README?
+-   A text file that sits with your data or code and explains what it is, how it
+    was made and how to use it. It is usually called `README.md` or
+    `README.txt` and kept in the top folder.
 
-## The Checklist
+-   Often the first thing a person sees and sometimes the only documentation they
+    read. Sites such as GitHub display it on the front page of a project.
 
-# Try writing one!
+-   Without one, data and code cannot be easily interpreted, reproduced or
+    credited. 
 
-## Examples
+-   Formal metadata standards are generally preferable where one fits your data.
+    A README is the practical option where there is no suitable standard, and the
+    quickest way to document your work for yourself and your collaborators.
 
-# What about your own work?
+## Best practices
 
-## Discuss
+These are adapted from guidance by Cornell Data Services[^1].
+
+-   Write one README for each logical group of files, such as a dataset made of
+    several similar files or a set of related scripts
+
+-   Name it so that it is clearly linked to the files it describes (if it sits within a top level of a repository then naming it README is acceptable)
+
+-   Use plain text (txt or Markdown is fine) rather than a Word or Google doc
+
+-   Separate pieces of
+    information with blank lines instead of one long paragraph
+
+-   If you write several READMEs, use the same order and the same terms in each
+
+-   Write dates as YYYY-MM-DD (ISO 8601)
+
+-   Use standard names and vocabularies for taxa, places and other keywords
+
+[^1]: Cornell Data Services, [Writing READMEs for Research
+    Data](https://data.research.cornell.edu/data-management/sharing/readme/) and
+    [Writing READMEs for Research Code &
+    Software](https://data.research.cornell.edu/data-management/sharing/writing-readmes-for-research-code-software/).
+    Both are licensed under CC BY 4.0.
+
+# Exercises
+
+## What to include
+
+Use a **data README** when your project mainly processes data using software, and
+a **code README** when the software itself is the main product. Many projects
+need parts of both.
+
+The tables show the minimum content that Cornell recommends for reuse.
+
+### README for data
+
+| Section | Minimum content |
+|:--------------------------|:--------------------------------------------------|
+| General information | Dataset title, who collected the data and how to contact them, date(s) of collection, where it was collected |
+| Data and file overview | Each file name with a short description, and when each file was created |
+| Sharing and access information | The licence or any restrictions on use |
+| Methodological information | How the data were collected or generated, how they were processed from the raw data, and any software or instruments needed to interpret them, with version numbers |
+| Data-specific information | Every variable with its full name and definition, the units, and the codes used for missing data |
+
+Also worth including: keywords, funders, how to cite the data, links to
+publications that use it, quality-assurance steps, and definitions of any
+quality flags.
+
+### README for code
+
+| Section | Minimum content |
+|:--------------------------|:--------------------------------------------------|
+| General information | Project name, version number and a one sentence description |
+| Project overview | A fuller description, the date of creation or latest release, what is where (code, tests, configuration, dependencies, documentation) and the total size |
+| Installation | Step-by-step set-up, system requirements, dependencies with versions, anything to configure by hand and known issues |
+| Usage | How to run it and what output to expect, and known limitations |
+| Licence | The licence and how to cite the code |
+| Contact information | The principal investigator and the maintainer |
+| Acknowledgements | Funders and grant numbers |
+
+Cornell also offers a downloadable template for each, which you can adapt:
+[data README template](https://hdl.handle.net/1813/116815.2) and
+[code README template](https://hdl.handle.net/1813/116816.3).
+
+## Exercise 1: Strong and weak READMEs
+
+Here are two READMEs for the same fictional dataset: a study of how quickly oak
+and ash leaves rot in woodland.
+
+### A weak README
+
+``` markdown
+# Litter data
+
+Data for my thesis. Collected 2022-2023.
+
+Files: bags.csv, bags2_final.csv
+
+Columns are explained in the paper. Ask me if you have questions.
+```
+
+### A stronger README
+
+``` markdown
+# Leaf litter decomposition in lowland woodland, 2022-2023
+
+## General information
+
+- **Authors:** A. Example and B. Sample, University of Life
+- **Contact:** litter-data@example.org
+- **Collected:** 2022-10-12 to 2023-10-14 at six woodland plots
+- **Funding:** Example Trust, grant 12345
+
+## Data and file overview
+
+`litterbag_mass.csv` - One row per litter bag per collection date (created 2024-01-20)
+`plot_description.csv` - One row per plot, with canopy cover and location
+
+## Sharing and access information
+
+- **Licence:** CC BY 4.0
+- **Cite as:** Example, A. and Sample, B. (2024). Leaf litter decomposition
+  data. University of Anywhere Data Repository.
+
+## Methodological information
+
+Dried leaves (10 g) were sealed into 5 mm mesh bags and placed in each plot in
+October 2022. One bag per species per plot was collected after 90, 180, 270
+and 365 days, then re-dried and weighed on a 0.01 g balance.
+
+## Data-specific information: `litterbag_mass.csv`
+
+48 rows and 6 variables.
+
+| Variable | Description | Units |
+|:---------|:------------|:------|
+| `plot` | Plot identifier | P1 to P6 |
+| `species` | Leaf species | `OAK` or `ASH` |
+| `days` | Days in the field | days |
+| `mass_init_g` | Dry mass at the start | g |
+| `mass_final_g` | Dry mass at collection | g |
+| `notes` | Comments, for example why a bag is missing | text |
+
+Missing values are blank. They are bags that were lost or torn open.
+```
+
+🎬 In your group, compare the two READMEs
+
+🎬 Use the tables above to work out what each one includes and what is missing
+
+🎬 List the five most important problems with the weak README
+
+
+## Exercise 2: Draft a README from a case study
+
+### Scenario
+
+You are a research assistant in an ecology group. A colleague has just finished a
+field season and is about to leave on fieldwork again. She has handed you a folder
+and asked you to write a README for it so that other people can use it. She has
+written down what she can remember.
+
+### The folder
+
+``` text
+pond-survey/
+├── data/
+│   ├── raw/pond_survey_2024.csv
+│   └── clean/pond_survey_2024_clean.csv
+├── scripts/
+│   ├── 01_clean_data.R
+│   └── 02_summarise.R
+├── outputs/
+│   ├── fig1_richness_by_pond.png
+│   └── model_summary.txt
+└── pond-survey.Rproj
+```
+
+### The colleague's notes
+
+These are exactly as she wrote them. They are informal, and they are not
+complete.
+
+-   Pond invertebrate survey, 2024. I wanted to know if cattle access to ponds
+    affects the number of invertebrate families.
+
+-   Two sites. MR = Marsh Reach, fenced off from cattle since 2019. HF = Heath
+    Farm, which is grazed. Three ponds at each (MR1 to MR3 and HF1 to HF3).
+
+-   I visited each pond once a month from May to August (`visit` 1 to 4). At each
+    visit I took a 3 minute sweep sample with a pond net (1 mm mesh) and identified
+    everything to family in the lab. `tn` is the number of families and `ab` is the
+    total number of individuals.
+
+-   I measured the water at each visit with a handheld probe, 10 cm below the
+    surface: `temp` is water temperature, `ph` is pH and `do` is dissolved oxygen.
+
+-   If a reading failed I typed -999. `flag` says what happened: 0 is fine, 1 is a
+    problem with the probe and 2 is where the pond was partly dry and I cut the
+    sweep short.
+
+-   `01_clean_data.R` changes the -999s to NA and writes the clean file.
+    `02_summarise.R` makes the figure and fits a mixed model of family richness with
+    site as the main effect and pond as a random effect, leaving out the flag 2
+    rows.
+
+-   I used R 4.3.1 with tidyverse 2.0.0, here 1.0.1 and lme4 1.1-35. Open the
+    project file in RStudio, then run script 01 and then 02.
+
+-   Funded by a small grants scheme from the university. I will have to find the
+    grant number.
+
+-   I have not decided on a licence yet. Maybe CC BY? Not sure whose email address
+    to put as the contact. Probably my supervisor's.
+
+### Your task
+
+🎬 In your group, draft a README for the `pond-survey` folder, using the tables
+above to decide what to include. Choose someone to write and let everyone
+contribute
+
+🎬 The folder has both data and code, so your README will need parts of both
+
+🎬 Write `[to be confirmed]` where information is missing. A README that shows its
+gaps is better than one that hides them or guesses
+
+🎬 Keep a list of the questions you would need to ask the colleague
+
+::: {.callout-important title="Challenge"}
+Which of the missing items would cause the most trouble for someone trying to use
+the data?
+:::
+
+## Live demonstration: a README for code
+
+We will look at a code repository, find what is missing from its README and
+improve it live. Use the code README table above to follow along.
+
+### repo contents
+
+```text
+woodland-birds/
+├── data/
+│   └── bird_counts.csv
+├── scripts/
+│   ├── 01_summarise_counts.R
+│   └── 02_plot_counts.R
+├── outputs/
+│   ├── species_totals.csv
+│   └── fig_species_totals.png
+├── LICENSE
+├── README.md
+└── woodland-birds.Rproj
+```
+### the README
+
+``` markdown
+# woodland-birds
+
+**Version:** 1.0.0
+
+R scripts that total the birds counted for each species in a woodland point-count survey and plot the results.
+
+## Project overview
+
+The scripts read a small table of bird counts (site, date, species and count), add up the counts for each species and draw a bar chart of the totals. The example data are a short extract from a larger survey.
+
+**Date of latest release:** 2024-06-30
+
+**What is where:**
+
+- `data/bird_counts.csv`: the bird counts (input data)
+- `scripts/`: the R code, numbered in the order to run it
+- `outputs/`: the results made by the scripts (a table and a figure)
+- Tests: none
+- Configuration files: none (the `.Rproj` file only sets the working folder)
+- Dependencies: listed under Installation
+- Documentation: this README
+
+**Total size:** about 15 KB
+
+## Installation
+
+**System requirements:** Windows, macOS or Linux. RStudio is recommended. Some basic packages are required.
+
+**Steps:**
+
+1. Install R and RStudio.
+2. Download this folder and unzip it.
+3. Open R and install the required packages
+
+**Known issues:** species names must contain no spaces, use underscores instead.
+
+## Usage
+
+1. Open `woodland-birds.Rproj` in RStudio.
+2. Open `scripts/01_summarise_counts.R` and click **Source**.
+3. Open `scripts/02_plot_counts.R` and click **Source**.
+
+Run the scripts in this order, because the second one uses the output of the first.
+
+**Expected output:**
+
+- `outputs/species_totals.csv`: total count for each species, largest first
+- `outputs/fig_species_totals.png`: bar chart of the totals
+
+**Limitations:** the counts are raw totals and are not adjusted for survey effort.
+
+## Licence
+
+Code is released under the MIT licence (see `LICENSE`).
+
+**Cite as:** Example, A. (2024). *woodland-birds* (Version 1.0.0) [Computer software]. University of Anywhere.
+
+## Contact information
+
+- **Principal investigator:** Dr B. Sample, University of Life (b.sample@example.org)
+- **Maintainer:** A. Example, University of Life (a.example@example.org)
+
+## Acknowledgements
+
+Funded by the Example Trust, grant number 12345.
+```
+
+::: {.callout-important title="Challenge"}
+Could you install and run the code using only the README? Which items from the
+Installation and Usage rows are missing?
+:::
+
+## Discussion: your own projects
+
+This part of the workshop is optional.
+
+🎬 Think of a dataset or a piece of code of your own
+
+🎬 Which three items from the checklist would you struggle to include today?
+
+🎬 What is the one thing you could add that would help someone most?
+
+If you would like feedback on a README of your own, you can share it with a
+neighbour or the group.
+
+# Summary
+
+-   A README explains your data or code to people who were not there when it was
+    made, so that it can be understood, reproduced, reused and credited.
+
+-   Cornell recommends five sections for data (general information, data and file
+    overview, sharing and access, methods, and data-specific information) and
+    seven for code (general information, project overview, installation, usage,
+    licence, contact and acknowledgements).
+
+-   Strong READMEs define every variable and its units, explain missing-value
+    codes, give software versions, list the steps in order and include a licence,
+    a citation and a contact.
+
+-   Check for sensitive data and anything you have been asked not to disclose.
+
+-   It is fine to show gaps. A README that says "to be confirmed" is better than
+    one that guesses.
+
+-   Start from a template and ask a colleague to test your README.
+
+# References
+
+Cornell Data Services. *Writing READMEs for Research Data*. Accessed 28 October 2026.
+<https://data.research.cornell.edu/data-management/sharing/readme/>
+
+Cornell Data Services. *Writing READMEs for Research Code & Software*. Accessed 28 October 2026.
+<https://data.research.cornell.edu/data-management/sharing/writing-readmes-for-research-code-software/>

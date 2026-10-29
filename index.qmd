@@ -4,23 +4,48 @@ toc: true
 toc-location: right
 ---
 
-# How to write a README
+# Writing clear README files for research data and code
 
 ## Overview
 
-Placeholder intro paragraph.
+This one hour workshop introduces you to best practices in research
+documentation, with a focus on README files. A README is a short text file that
+sits alongside your data or code and tells other people what it is, how it was
+made and how to use it. A clear README supports reproducibility, collaboration
+and reuse.
+
+The workshop combines short presentations with interactive exercises. We will
+look at examples of strong and weak READMEs and use guidance from Cornell Data
+Services on what to include. In small groups, you will draft a README from a
+short case study dataset. A second example, this time of code, will be shown and appraised. The session finishes with discussion and optional feedback on
+your own projects.
+
+The examples are from ecology and environmental research, but the concepts are
+applicable to any field. No specialist software or preparation is required.
+
+## Audience
+
+This workshop is intended for students, early-career researchers and
+practitioners in ecology and environmental sciences who produce data or code as
+part of their work. No advanced technical experience is required. It is suitable
+for those new to coding and for more experienced researchers who want better
+documentation practices.
+
+The materials use plain language and are provided on this website in an
+accessible digital format. The activities are done in groups so that you can
+support each other and take part at a level that is comfortable for you.
 
 ## Learning objectives
 
 Participants will learn how to:
 
-- Construct a clear and well-structured README file that effectively describes a project’s purpose, contents, and usage.
-- Use Markdown syntax to format README documents, including headings, lists, links, and emphasis, without relying on word processors.
-- Integrate key information about data, code, and workflows into a coherent narrative that supports reproducibility and reuse.
-- Include essential project metadata (e.g., installation instructions, dependencies, file structure, and usage examples) in a way that is accessible to different audiences.
-- Apply best practice principles for documenting code and data, including clarity, completeness, and consistency.
-- Adapt README content for different contexts (e.g., GitHub repositories, shared data folders, or collaborative research projects).
+-   Explain why a README matters for reproducibility, collaboration and reuse.
+-   Recognise the features of strong READMEs and the common pitfalls of weak
+    ones.
+-   Plan, write and check a README for a dataset, using a list of recommended
+    content.
+-   Describe what a README for code needs, including installation, usage,
+    licence and contact details.
 
-## Credits
-
+## About the organisers
 This workshop was designed as a joint venture between the BES Journal of Methods in Ecology and Evolution and the [UKRI Digital Research Skills Catalyst](https://digitalskillscatalyst.ac.uk/).

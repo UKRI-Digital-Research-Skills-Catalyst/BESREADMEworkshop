@@ -1,0 +1,18 @@
+---
+title: "Pre-course instructions"
+toc: true
+toc-location: right
+---
+
+To participate in this workshop, you do not need to prepare anything or install
+any software. 
+
+You will work in small groups. A laptop or tablet is useful if you would like to
+type your group's README, but pen and paper work just as well.
+
+## Thinking about a project of your own (optional)
+
+In the last part of the workshop there is time for discussion and for feedback
+on your own documentation. If you would like to take part, think about a dataset
+or a piece of code that you have made or work with. It does not need to be
+finished. If you already have a README for it, you can bring it along.

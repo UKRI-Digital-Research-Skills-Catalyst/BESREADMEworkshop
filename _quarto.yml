@@ -20,6 +20,8 @@ website:
     left:
       - text: "Welcome!"
         file: index.qmd
+      - text: "Before the course"
+        file: before.qmd
       - text: "Materials"
         file:  materials.qmd
 
