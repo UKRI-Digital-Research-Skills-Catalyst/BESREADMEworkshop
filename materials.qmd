@@ -278,7 +278,6 @@ The scripts read a small table of bird counts (site, date, species and count), a
 - `data/bird_counts.csv`: the bird counts (input data)
 - `scripts/`: the R code, numbered in the order to run it
 - `outputs/`: the results made by the scripts (a table and a figure)
-- Tests: none
 - Configuration files: none (the `.Rproj` file only sets the working folder)
 - Dependencies: listed under Installation
 - Documentation: this README
