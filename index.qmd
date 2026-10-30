@@ -9,7 +9,7 @@ toc-location: right
 ## Overview
 
 This one hour workshop introduces you to best practices in research
-documentation, with a focus on README files. A README is a short text file that
+documentation, with a focus on README files. A README is a text file that
 sits alongside your data or code and tells other people what it is, how it was
 made and how to use it. A clear README supports reproducibility, collaboration
 and reuse.
