@@ -22,6 +22,8 @@ toc-location: right
     A README is the practical option where there is no suitable standard, and the
     quickest way to document your work for yourself and your collaborators.
 
+![a README is required for all repository types: Project (Data + Scripts + Paper), Data, and Code (Software/Scripts)](images/readmeinfographic.png)
+
 ## Best practices
 
 These are adapted from guidance by Cornell Data Services[^1].
